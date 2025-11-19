@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claim Your Reward!</title>
+    <title>Clash Royale Emote Guide</title>
     
-    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Load Google Font 'Luckiest Guy' --><link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     
     <style>
         body {
@@ -17,205 +19,112 @@
             background-position: center;
             background-attachment: fixed;
             color: #ffffff;
-            letter-spacing: 0.5px;
         }
 
-        /* This is the main style for ALL game buttons */
-        .btn-collect {
+        .btn-action {
             font-family: 'Luckiest Guy', cursive;
-            background-image: linear-gradient(to bottom, #fde047, #facc15); /* yellow-300 to yellow-400 */
-            border-bottom: 5px solid #ca8a04; /* yellow-600 */
+            background-image: linear-gradient(to bottom, #fde047, #facc15);
+            border-bottom: 5px solid #ca8a04;
             border-top: 1px solid #fef08a;
             border-left: 1px solid #fef08a;
             border-right: 1px solid #fef08a;
-            color: #422006; /* Dark brown/gold text */
-            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+            color: #422006;
+            text-shadow: 0 1px 1px rgba(255,255,255,0.4);
             transition: all 0.1s ease-in-out;
             cursor: pointer;
         }
 
-        .btn-collect:hover:not(:disabled) {
-            background-image: linear-gradient(to bottom, #fef08a, #fde047); 
+        .btn-action:hover {
+            background-image: linear-gradient(to bottom, #fef08a, #fde047);
         }
 
-        .btn-collect:active:not(:disabled) {
+        .btn-action:active {
             transform: translateY(3px);
             border-bottom-width: 2px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
-        .img-fallback {
-            background: #444;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 12px;
-            line-height: 1.2;
-            padding: 8px;
-            box-sizing: border-box;
-            border-radius: 0.5rem; /* 8px */
-        }
-
         .glowing-border {
-            border-color: rgba(250, 204, 21, 0.7);
-            box-shadow: 0 0 15px rgba(250, 204, 21, 0.4), 0 0 30px rgba(250, 204, 21, 0.2), 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border-color: rgba(250,204,21,0.7);
+            box-shadow: 0 0 15px rgba(250,204,21,0.4), 0 0 30px rgba(250,204,21,0.2), 0 25px 50px -12px rgba(0,0,0,0.25);
             animation: pulse-glow 2.5s infinite alternate;
         }
 
         @keyframes pulse-glow {
             from {
-                border-color: rgba(250, 204, 21, 0.7);
-                box-shadow: 0 0 15px rgba(250, 204, 21, 0.4), 0 0 30px rgba(250, 204, 21, 0.2), 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                border-color: rgba(250,204,21,0.7);
+                box-shadow: 0 0 15px rgba(250,204,21,0.4), 0 0 30px rgba(250,204,21,0.2), 0 25px 50px -12px rgba(0,0,0,0.25);
             }
             to {
-                border-color: rgba(254, 240, 138, 1);
-                box-shadow: 0 0 25px rgba(250, 204, 21, 0.7), 0 0 45px rgba(250, 204, 21, 0.4), 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                border-color: rgba(254,240,138,1);
+                box-shadow: 0 0 25px rgba(250,204,21,0.7), 0 0 45px rgba(250,204,21,0.4), 0 25px 50px -12px rgba(0,0,0,0.25);
             }
         }
-
-        #iframe-container {
-            border: 2px solid rgba(250, 204, 21, 0.2);
-            background-color: #172554;
-        }
-
-        /* No more specific reward-image or reward-text styles needed */
-
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Main container -->
-    <div class="min-h-screen w-full flex items-center justify-center p-4 bg-black/50">
+<div class="min-h-screen w-full flex items-center justify-center p-4 bg-black/50">
+    <div class="bg-blue-950/90 backdrop-blur-sm border-4 rounded-2xl p-6 md:p-8 max-w-xl w-full text-center glowing-border">
 
-        <!-- The main content card (REWARDS) -->
-        <div id="main-card" class="bg-blue-950/90 backdrop-blur-sm border-4 rounded-2xl p-6 md:p-8 max-w-xl w-full text-center transition-all duration-300 glowing-border">
+        <!-- Logo -->
+        <img src="https://i.postimg.cc/QMCdGJdd/439ff954a22605b33e5eb9de219905ef.png" alt="Clash Royale Logo" class="mx-auto h-20 w-auto mb-6">
 
-            <img src="https://i.postimg.cc/QMCdGJdd/439ff954a22605b33e5eb9de219905ef.png" alt="Clash Royale Logo" class="mx-auto h-20 w-auto mb-6" onerror="this.outerHTML='<div class=\'mx-auto h-20 w-full mb-6 rounded-lg img-fallback\'>Clash Royale Logo Failed to Load</div>'">
+        <!-- Title -->
+        <h1 class="text-3xl font-extrabold text-white mb-6" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+            Clash Royale Emote Guide
+        </h1>
 
-            <img src="https://i.postimg.cc/0Ns0Vr5x/2301d1b2d993aaaa0946a4ef6746bbe3.png" alt="Reward Icon" class="mx-auto h-36 w-36 mb-6" onerror="this.outerHTML='<div class=\'mx-auto h-36 w-36 mb-6 rounded-lg img-fallback\'>Reward Icon Failed to Load</div>'">
+        <!-- Description -->
+        <p class="text-lg text-gray-200 mb-6">
+            Discover the latest emotes, deck tips, and strategies for Clash Royale!  
+            Follow this guide for step-by-step instructions.
+        </p>
 
-            <h1 class="text-3xl font-extrabold text-white mb-6" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
-                Claim a Reward in Clash Royale!
-            </h1>
+        <!-- Action Button -->
+        <a href="https://your-safe-guide-page.com" target="_blank" class="btn-action inline-block w-full py-4 px-8 rounded-xl text-2xl font-black uppercase shadow-xl mb-6">
+            Open Guide
+        </a>
 
-            <!-- New Button (replaces the QR grid) -->
-            <button id="get-reward-btn" class="btn-collect inline-block w-full py-4 px-8 rounded-xl text-2xl font-black uppercase shadow-xl flex-shrink-0 mb-6">
-                Click to Get Your Reward
-            </button>
-
-            <!-- Trust Indicators -->
-            <div class="flex flex-col md:flex-row justify-center items-center gap-y-2 gap-x-6 mb-8 text-green-400 font-bold text-sm md:text-base tracking-wide drop-shadow-md">
-                <div class="flex items-center gap-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                    <span>No ID Required</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                    <span>No Personal Info</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                    <span>Complete 1 Task Only</span>
-                </div>
+        <!-- Trust Indicators -->
+        <div class="flex flex-col md:flex-row justify-center items-center gap-y-2 gap-x-6 mb-8 text-green-400 font-bold text-sm md:text-base tracking-wide drop-shadow-md">
+            <div class="flex items-center gap-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span>No personal info needed</span>
             </div>
-
-            <!-- Footer Section -->
-            <div class="mt-8 text-center">
-                <p class="text-sm text-gray-200 mb-4" style="font-family: Arial, sans-serif;">
-                    Get Clash Royale for free: 
-                </p>
-                <div class="flex justify-center items-center gap-4 mb-6">
-                    <a href="https://apps.apple.com/us/app/clash-royale/id1053012308" target="_blank" rel="noopener noreferrer" class="block h-10 w-32">
-                        <img src="https://i.postimg.cc/qvh1bgPn/5a902db97f96951c82922874.png" alt="App Store" class="h-full w-full object-contain" onerror="this.outerHTML='<div class=\'h-10 w-32 rounded-lg img-fallback\'>App Store Failed</div>'">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.supercell.clashroyale&hl=en" target="_blank" rel="noopener noreferrer" class="block h-10 w-32">
-                        <img src="https://i.postimg.cc/4x7WLnD1/5a902dbf7f96951c82922875.png" alt="Google Play" class="h-full w-full object-contain" onerror="this.outerHTML='<div class=\'h-10 w-32 rounded-lg img-fallback\'>Google Play Failed</div>'">
-                    </a>
-                </div>
-                
-                <img src="https://i.postimg.cc/Hn4St550/58eeb750ee9418469d17ee03.png" alt="Supercell Logo" class="mx-auto h-48 w-auto opacity-70" onerror="this.outerHTML='<div class=\'mx-auto h-48 w-24 mb-3 rounded-lg img-fallback\'>Supercell Logo Failed to Load</div>'">
-                
-                <p class="text-xs text-gray-300 mt-3 space-x-2" style="font-family: Arial, sans-serif;">
-                    <a href="#" class="hover:underline">Terms of Service</a>
-                    <span>|</span>
-                    <a href="#" class="hover:underline">Privacy Policy</a>
-                </Screen reader support enabled.
+            <div class="flex items-center gap-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                <span>Safe & Secure</span>
             </div>
         </div>
 
-    </div>
-
-    <!-- Locker Overlay -->
-    <!-- Hidden by default, shown by JS -->
-    <div id="locker-overlay" class="fixed inset-0 w-full h-full flex items-center justify-center p-4 bg-black/80 z-50" style="display: none;">
-
-        <div class="bg-blue-950/90 backdrop-blur-sm border-4 rounded-2xl p-4 max-w-6xl w-full h-[95vh] flex flex-col glowing-border">
-            <h2 id="locker-title" class="text-2xl font-extrabold text-white mb-1 flex-shrink-0" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
-                Unlock Rewards!
-            </h2>
-            <p id="locker-subtitle" class="text-base text-gray-200 mb-2 flex-shrink-0">
-                Please complete a task below to unlock your reward.
+        <!-- App Store / Google Play -->
+        <div class="mt-8 text-center">
+            <p class="text-sm text-gray-200 mb-4" style="font-family: Arial, sans-serif;">
+                Download Clash Royale:
             </p>
-            
-            <!-- This button will reveal the embedded locker -->
-            <button id="verify-btn" class="btn-collect inline-block w-full py-3 px-6 rounded-xl text-xl font-black uppercase shadow-xl flex-shrink-0 mb-2">
-                Verify to Unlock
-            </button>
-            
-            <!-- The iframe container, hidden by default -->
-            <div id="iframe-container" class="w-full flex-grow rounded-lg overflow-hidden" style="display: none;">
-                <iframe src="https://lockedapp.org/cl/i/1xojje" class="w-full h-full border-0" scrolling="yes"></iframe>
+            <div class="flex justify-center items-center gap-4 mb-6">
+                <a href="https://apps.apple.com/us/app/clash-royale/id1053012308" target="_blank" class="block h-10 w-32">
+                    <img src="https://i.postimg.cc/qvh1bgPn/5a902db97f96951c82922874.png" alt="App Store" class="h-full w-full object-contain">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.supercell.clashroyale&hl=en" target="_blank" class="block h-10 w-32">
+                    <img src="https://i.postimg.cc/4x7WLnD1/5a902dbf7f96951c82922875.png" alt="Google Play" class="h-full w-full object-contain">
+                </a>
             </div>
 
+            <!-- Supercell Logo -->
+            <img src="https://i.postimg.cc/Hn4St550/58eeb750ee9418469d17ee03.png" alt="Supercell Logo" class="mx-auto h-48 w-auto opacity-70">
+
+            <!-- Footer -->
+            <p class="text-xs text-gray-300 mt-3 space-x-2" style="font-family: Arial, sans-serif;">
+                <a href="#" class="hover:underline">Terms of Service</a>
+                <span>|</span>
+                <a href="#" class="hover:underline">Privacy Policy</a>
+            </p>
         </div>
+
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const lockerOverlay = document.getElementById('locker-overlay');
-            const verifyBtn = document.getElementById('verify-btn');
-            const iframeContainer = document.getElementById('iframe-container');
-            const getRewardBtn = document.getElementById('get-reward-btn'); // New button reference
-            
-            // Get the text elements to hide inside the locker
-            const lockerTitle = document.getElementById('locker-title');
-            const lockerSubtitle = document.getElementById('locker-subtitle');
-
-            // 1. When user clicks "Click to Get Your Reward" button
-            getRewardBtn.addEventListener('click', () => {
-                // Show the locker overlay
-                lockerOverlay.style.display = 'flex';
-            });
-
-            // 2. When user clicks "Verify to Unlock" (inside the locker)
-            verifyBtn.addEventListener('click', async () => {
-                // Hide the title and subtitle to create more space
-                if (lockerTitle) lockerTitle.style.display = 'none';
-                if (lockerSubtitle) lockerSubtitle.style.display = 'none';
-
-                // Show the iframe
-                iframeContainer.style.display = 'block';
-
-                // Disable the button and add disabled styles
-                verifyBtn.disabled = true;
-                verifyBtn.classList.add('opacity-50', 'cursor-not-allowed');
-                verifyBtn.textContent = "Verifying...";
-            });
-
-            // 3. Listen for a message from the iframe (on completion)
-            window.addEventListener("message", (event) => {
-                // Check if the locker is visible before doing anything
-                if (lockerOverlay.style.display !== 'none') {
-                    // Hide the locker
-                    lockerOverlay.style.display = 'none';
-                    
-                    // The alert() line that showed the pop-up has been removed.
-                }
-            }, false);
-        });
-    </script>
+</div>
 
 </body>
 </html>
